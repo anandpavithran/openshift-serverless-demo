@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: Secret
+metadata:
+  name: githubsecret
+type: Opaque
+stringData:
+  accessToken: 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
+  secretToken: anand
