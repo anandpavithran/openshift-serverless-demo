@@ -1,0 +1,16 @@
+apiVersion: serving.knative.dev/v1
+kind: Service
+metadata:
+  name: greeter
+  namespace: test100
+spec:
+  template:
+    spec:
+      containers:
+      - image: quay.io/anandpavithran/infosys:1.0
+        livenessProbe:
+          httpGet:
+            path: /
+        readinessProbe:
+          httpGet:
+            path: /
