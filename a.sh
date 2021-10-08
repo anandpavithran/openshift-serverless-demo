@@ -1,5 +1,1 @@
-#!/bin/bash
-for i in $(seq 1 1000000)
-do
-curl http://greeter-test100.2886795272-80-kota01.environments.katacoda.com
-done
+seq 1 10000 | xargs -n1 -P 100 curl -I "http://greeter-test100.apps.ocp4.example.com"
